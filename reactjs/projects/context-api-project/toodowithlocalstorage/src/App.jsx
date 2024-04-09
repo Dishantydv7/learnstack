@@ -49,7 +49,7 @@ useEffect(()=> {
                         {/*Loop and Add TodoItem here */}
                         {todos.map((todo) => (
                           <div key = {todo.id}
-                          className='w-full'>
+                          className='w-full'> 
                               <TodoItem todo={todo}/>
                           </div>
                         ))}

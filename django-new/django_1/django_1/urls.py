@@ -1,8 +1,8 @@
 """
-URL configuration for django1 project.
+URL configuration for django_1 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.2/topics/http/urls/
+    https://docs.djangoproject.com/en/5.0/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -16,16 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path , include
-from . import views
+from . import views 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("" , views.home , name="home"),
-    path("harish/" , views.harish , name="gendu"),
+    path("home2/" , views.home2 , name="home2"),
+    path("home3/" , views.home3 , name="home3"),
 
-
-
-
-
-path("__reload__/", include("django_browser_reload.urls")),
+    path("batman/" , include('batman.urls'))
 ]

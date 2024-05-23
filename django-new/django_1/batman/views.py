@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from .models import ALL_CHAI
 
 # Create your views here.
 
 def dishant(request):
-    return render(request , 'batman/dishant.html')
+    chais = ALL_CHAI.objects.all()
+    return render(request , 'batman/dishant.html' , {'chais' : chais})

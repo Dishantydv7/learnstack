@@ -10,10 +10,17 @@ you are on a batman page
 {% for chai in chais  %}
     <div>
         <h1> {{ chai.name }} </h1>
-        <img src="{{ chai.image }}" alt="{{ chai.name }}">
+        <img src="{{ chai.image.url }}" alt="{{ chai.name }}">
+
+        <a href="{% url 'chai_detail' chai.id %}">
+            <button>
+
+                View Detail
+            </button>
+
+        </a>
     </div>
 {% endfor %} 
-
 
 {% endblock %}
 
